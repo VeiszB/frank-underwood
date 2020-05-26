@@ -12,7 +12,7 @@ html {
 
 @font-face {
   font-family: "Zilap", sans-serif;
-  src: url(/font/Zilap\Sleep\Demo.ttf);
+  src: url(font/Zilap\Sleep\Demo.ttf);
 }
 
 /* Main */
@@ -80,7 +80,7 @@ a {
       rgba(255, 255, 255, 0) 50%,
       rgb(0, 0, 0) 100%
     ),
-    url("/img/about.jpg");
+    url("img/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -212,7 +212,7 @@ a {
       rgba(255, 255, 255, 0.418) 50%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url(/img/quotes-background.jpg);
+    url("img/quotes-background.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -312,7 +312,7 @@ p {
       rgba(255, 255, 255, 0) 50%,
       rgb(0, 0, 0) 100%
     ),
-    url("/img/contact.jpg");
+    url("img/contact.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
