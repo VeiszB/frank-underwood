@@ -67,6 +67,12 @@ a {
   text-decoration: none;
 }
 
+audio {
+  background-color: #202bc2;
+  filter: none;
+  border-radius: 25%;
+}
+
 .about {
   height: 85vh;
   background-image: linear-gradient(
@@ -174,7 +180,7 @@ a {
 }
 
 .about-frank h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   font-family: "Anton", sans-serif;
   text-transform: uppercase;
   color: #182b53;
@@ -227,7 +233,7 @@ a {
   margin: 0 5vh;
   margin-top: 8vh;
   text-align: center;
-  font-size: 6rem;
+  font-size: 7rem;
   font-family: "Anton", sans-serif;
   text-transform: uppercase;
   color: #182b53;
@@ -242,7 +248,7 @@ a {
   height: 5vh;
   margin: 4vh 4vh;
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: "Anton", sans-serif;
   /*text-transform: uppercase;*/
   color: #182b53;
@@ -273,7 +279,7 @@ a {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.9);
 }
 
 .card1 {
@@ -308,11 +314,17 @@ p {
   background-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0) 50%,
+      rgba(12, 12, 12, 0.075) 60%,
       rgb(0, 0, 0) 100%
     ),
     linear-gradient(
       to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 95%,
+      rgb(0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to top,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 95%,
       rgb(0, 0, 0) 100%
@@ -330,28 +342,24 @@ p {
 .contact-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-left: 80vh;
 }
 
 .contact-content h1 {
-  width: 90vh;
-  height: 10vh;
-  padding: 4rem;
-  margin: 0 5vh;
-  margin-top: 8vh;
-  text-align: center;
-  font-size: 6rem;
+  font-size: 8rem;
   font-family: "Anton", sans-serif;
   text-transform: uppercase;
   color: #182b53;
-  letter-spacing: 0.3rem;
-  text-shadow: 1px 1px 1px #c71235;
-  z-index: 3;
-  position: relative;
+  letter-spacing: 0.4rem;
+  text-shadow: 0.5px 0.5px 1px #c71235, -1px -1px 1px #fdfdfd;
+  padding: 1rem;
 }
 
 .social {
   width: 50vh;
-  margin-left: 90vh;
+  /*margin-left: 90vh;*/
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -365,6 +373,7 @@ p {
   color: #ffffff;
   letter-spacing: 0.3rem;
   text-shadow: 1px 1px 1px #c71235;
+  padding: 2rem;
 }
 
 .social a:hover {
@@ -378,6 +387,10 @@ p {
   margin-right: 20px;
   border: 2px solid rgb(122, 122, 122);
   border-radius: 50%;
+}
+
+.social a img:hover {
+  border: 2px solid rgb(199, 18, 53);
 }
 
 /* FOOTER */
