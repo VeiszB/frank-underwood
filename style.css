@@ -810,7 +810,7 @@ footer a:hover {
         rgba(255, 255, 255, 0.164) 50%,
         rgb(0, 0, 0) 100%
       ),
-      url(/img/frank_underwood1.png);
+      url(img/frank_underwood1.png);
     background-position: top;
   }
 
