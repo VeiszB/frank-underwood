@@ -712,6 +712,10 @@ footer a:hover {
     font-size: 2.8rem;
   }
 
+  .card {
+    flex: 1 1 35rem;
+  }
+
   .social a {
     font-size: 4rem;
   }
@@ -741,5 +745,145 @@ footer a:hover {
   .social a {
     text-align: left;
     font-size: 5.8rem;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  nav {
+    width: 95%;
+    flex-wrap: nowrap;
+  }
+
+  #logo {
+    flex: 1 1 5px;
+  }
+
+  .main-logo {
+    height: 8vh;
+    padding: 0.2rem;
+  }
+
+  nav ul li a {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+  }
+
+  .about-me {
+    flex: 1 1 10px;
+  }
+
+  .about-me h1 {
+    font-size: calc(2.5rem + 2vh);
+    margin-top: 40vh;
+    margin-left: 5vh;
+    line-height: 1.3;
+    text-align: left;
+    text-shadow: -0.5px 0 rgb(206, 206, 206), 0 0.5px rgb(206, 206, 206),
+      0.5px 0 rgb(206, 206, 206), 0 -0.5px rgb(206, 206, 206);
+  }
+
+  .about-me h1:hover {
+    display: none;
+  }
+
+  .about-pik {
+    flex: 1 1 10px;
+    width: 20vh;
+  }
+
+  #biography {
+    height: 100vh;
+    width: auto;
+    justify-content: space-between;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.164) 50%,
+        rgb(0, 0, 0) 100%
+      ),
+      url(/img/frank_underwood1.png);
+    background-position: top;
+  }
+
+  .about-frank {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20rem;
+    align-content: center;
+    background-color: #182b53a1;
+    padding: 1.5rem;
+    border-radius: 10%;
+  }
+
+  .about-frank h1 {
+    font-size: 2.8rem;
+    margin-left: 15px;
+    padding: 1rem 1rem;
+    color: #c71235;
+    text-shadow: -0.5px 0 rgb(206, 206, 206), 0 0.5px rgb(206, 206, 206);
+  }
+
+  .about-frank p {
+    flex: 1 1 20vh;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding: 2vh 5vh;
+    max-width: 60vh;
+    color: white;
+  }
+
+  .frank-pik {
+    display: none;
+  }
+
+  #quotes {
+    height: auto;
+  }
+
+  #quotes h1 {
+    font-size: 4rem;
+    margin: 3vh 3vh;
+  }
+
+  #quotes h2 {
+    font-size: 2.8rem;
+    margin: 3vh 3vh;
+  }
+
+  .card2 p {
+    color: rgb(41, 41, 41);
+  }
+  .card3 p {
+    color: grey;
+  }
+
+  .social a {
+    font-size: 4rem;
+  }
+
+  #contact {
+    background-position: right;
+  }
+
+  .contact-content {
+    margin-left: 5vh;
+    width: 80%;
+  }
+
+  .contact-content h1 {
+    font-size: 7rem;
+  }
+
+  .social {
+    width: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .social a {
+    text-align: left;
+    font-size: 5rem;
   }
 }
