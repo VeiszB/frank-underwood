@@ -12,9 +12,10 @@ html {
 
 /* Main */
 
+/* Header */
+
 .main-head {
   max-height: 20vh;
-  /*background: linear-gradient(black, white);*/
   box-shadow: 3px 3px 10px #182b53;
   z-index: 2;
   position: relative;
@@ -31,6 +32,7 @@ html {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   width: 90%;
   margin: auto;
   align-items: center;
@@ -38,6 +40,7 @@ nav {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   flex: 4 1 20rem;
@@ -70,8 +73,10 @@ a {
 audio {
   background-color: #202bc2;
   filter: none;
-  border-radius: 25%;
+  border: 2px solid rgb(24, 43, 83);
 }
+
+/* About me */
 
 .about {
   height: 85vh;
@@ -84,11 +89,14 @@ audio {
     url("img/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-position: top;
   box-shadow: 3px 3px 10px #182b53;
 }
 
 .about {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -126,21 +134,6 @@ audio {
   text-align: left;
 }
 
-/*.about-description p {
-  font-size: 4rem;
-  font-family: "Anton", sans-serif;
-  text-transform: capitalize;
-  letter-spacing: 3px;
-  color: #182b53;
-  text-shadow: -1px 0 3px rgb(255, 255, 255), 0 1px 3px rgb(255, 255, 255),
-    1px 0 3px rgb(255, 255, 255), 0 -1px 3px rgb(255, 255, 255);
-  text-shadow: -1px 0 rgb(199, 18, 53), 0 1px rgb(199, 18, 53),
-    1px 0 rgb(199, 18, 53), 0 -1px rgb(199, 18, 53);
-  padding: 2vh;
-  background-color: rgba(255, 255, 255, 0.397);
-  border-radius: 20%; 
-} */
-
 .about-pik {
   flex: 1 1 50px;
   width: 50vh;
@@ -158,6 +151,8 @@ audio {
     transform: translateX(0%) rotateY(0deg);
   }
 }
+
+/* BIOGRAPHY */
 
 #biography {
   display: flex;
@@ -199,12 +194,14 @@ audio {
 }
 
 .frank-pik {
-  flex: 3 1 20rem;
+  flex: 3 1 10rem;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
+  width: auto;
 }
+
+/* QUOTES */
 
 #quotes {
   height: 100vh;
@@ -229,9 +226,8 @@ audio {
 #quotes h1 {
   width: 90vh;
   height: 10vh;
-  padding: 4rem;
-  margin: 0 5vh;
-  margin-top: 8vh;
+  padding: 3rem;
+  margin: 5vh 5vh;
   text-align: center;
   font-size: 7rem;
   font-family: "Anton", sans-serif;
@@ -260,11 +256,12 @@ audio {
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  z-index: 3;
-  position: relative;
   width: 95%;
   margin: auto;
+  justify-content: center;
+  align-content: center;
 }
 
 .card {
@@ -275,7 +272,9 @@ audio {
   transition: 0.3s;
   justify-content: center;
   overflow: hidden;
-  background-color: rgba(206, 206, 206, 0.158);
+  background-color: rgba(206, 206, 206, 0.24);
+  background-position: cover;
+  max-width: 50vh;
 }
 
 .card:hover {
@@ -306,7 +305,10 @@ p {
   height: 30vh;
   width: auto;
   align-content: center;
+  background-position: center;
 }
+
+/* CONTACT */
 
 #contact {
   height: 100vh;
@@ -416,4 +418,328 @@ p {
 footer a:hover {
   color: #c71235;
   text-shadow: 1px 1px 1px #ffffff;
+}
+
+.burger,
+.menu-check {
+  display: none;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1724px) {
+  .about-frank h1 {
+    font-size: 5rem;
+  }
+
+  .about-frank p {
+    font-size: 2.6rem;
+  }
+
+  #quotes h1 {
+    font-size: 5rem;
+    margin-top: 5vh;
+  }
+
+  #quotes h2 {
+    font-size: 3.8rem;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(206, 206, 206, 0.24);
+  }
+
+  .cards p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .social a {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1424px) {
+  #logo {
+    flex: 1 1 5rem;
+  }
+
+  .main-logo {
+    height: 12vh;
+    padding: 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: calc(1.5rem + 2vh);
+    initial-letter: 0.1rem;
+  }
+
+  audio {
+    width: 10vh;
+  }
+
+  .about-me {
+    flex-direction: column;
+    flex: 2 1 30px;
+  }
+
+  .about-me h1 {
+    font-size: calc(5rem + 2vh);
+    line-height: 1.5;
+    margin-left: 5vh;
+  }
+
+  .about-me h1:hover {
+    font-size: calc(6rem + 2vh);
+  }
+
+  .about-pik {
+    flex: 1 1 40px;
+    width: 35vh;
+  }
+
+  .about-frank {
+    flex: 6 1 20rem;
+    margin-left: 10vh;
+  }
+
+  .about-frank h1 {
+    font-size: 5rem;
+  }
+
+  .about-frank p {
+    font-size: 2.2rem;
+  }
+
+  /* QUETES */
+
+  #quotes h1 {
+    height: 5vh;
+    padding: 1rem;
+    margin: 5vh 5vh;
+    font-size: 5rem;
+  }
+
+  #quotes h2 {
+    height: 5vh;
+    margin: 2vh 2vh;
+    font-size: 4rem;
+  }
+
+  .cards {
+    margin: 5vh;
+  }
+
+  .card {
+    flex: 1 1 25rem;
+    flex-wrap: wrap;
+    margin: 2rem 3rem;
+    min-width: 30vh;
+  }
+
+  .card img {
+    width: 50vh;
+    height: auto;
+  }
+
+  /*Contact*/
+
+  .social {
+    margin-right: 10vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #logo {
+    flex: 1 1 2rem;
+  }
+
+  .main-logo {
+    height: 10vh;
+    padding: 0.2rem;
+  }
+
+  nav ul li a {
+    font-size: calc(0.8rem + 2vh);
+    letter-spacing: 1px;
+  }
+
+  .about-me {
+    flex: 2 1 20px;
+  }
+
+  .about-me h1 {
+    font-size: calc(3.5rem + 2vh);
+    line-height: 1.5;
+    margin-left: 5vh;
+    text-shadow: -0.5px 0 rgb(206, 206, 206), 0 0.5px rgb(206, 206, 206),
+      0.5px 0 rgb(206, 206, 206), 0 -0.5px rgb(206, 206, 206);
+  }
+
+  .about-me h1:hover {
+    font-size: calc(4rem + 2vh);
+  }
+
+  .about-pik {
+    flex: 1 1 35px;
+    width: 30vh;
+  }
+
+  .about-frank {
+    flex: 7 1 20rem;
+    margin-left: 5vh;
+  }
+
+  .about-frank h1 {
+    font-size: 4rem;
+  }
+
+  .about-frank p {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 2.5vh 0;
+  }
+
+  #quotes {
+    height: auto;
+  }
+
+  .card {
+    flex: 1 1 35rem;
+  }
+
+  .contact-content {
+    margin-left: 44vh;
+  }
+
+  .contact-content h1 {
+    font-size: 6.5rem;
+  }
+
+  .social a {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  audio {
+    width: 7vh;
+  }
+
+  #logo {
+    flex: 1 1 1rem;
+  }
+
+  .main-logo {
+    height: 10vh;
+    padding: 0.2rem;
+  }
+
+  nav ul li a {
+    font-size: calc(0.5rem + 2vh);
+    letter-spacing: 1px;
+    padding: 1rem;
+  }
+
+  .about-me {
+    flex: 2 1 10px;
+  }
+
+  .about-me h1 {
+    font-size: calc(2.5rem + 2vh);
+    line-height: 1.5;
+    margin-left: 15vh;
+    margin-top: 25vh;
+    text-align: right;
+    text-shadow: -0.5px 0 rgb(206, 206, 206), 0 0.5px rgb(206, 206, 206),
+      0.5px 0 rgb(206, 206, 206), 0 -0.5px rgb(206, 206, 206);
+  }
+
+  .about-me h1:hover {
+    display: none;
+  }
+
+  .about-pik {
+    flex: 1 1 35px;
+    width: 30vh;
+  }
+
+  .about-frank {
+    flex: 2 1 5rem;
+    margin-left: 5vh;
+  }
+
+  .about-frank h1 {
+    font-size: 3.5rem;
+  }
+
+  .about-frank p {
+    flex: 1 1 20vh;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 2vh 0;
+    min-width: 25vh;
+  }
+
+  #biography {
+    height: 100vh;
+    width: auto;
+    justify-content: space-between;
+  }
+
+  .frank-pik {
+    flex: 1 1 20vh;
+    /*background-position: center;*/
+    height: 100%;
+    width: auto;
+  }
+
+  #quotes {
+    height: auto;
+  }
+
+  #quotes h1 {
+    font-size: 4rem;
+  }
+
+  #quotes h2 {
+    font-size: 2.8rem;
+  }
+
+  .social a {
+    font-size: 4rem;
+  }
+
+  /* Contact mobil */
+
+  #contact {
+    background-position: right;
+  }
+
+  .contact-content {
+    margin-left: 5vh;
+    width: 80%;
+  }
+
+  .contact-content h1 {
+    font-size: 7.5rem;
+  }
+
+  .social {
+    width: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .social a {
+    text-align: left;
+    font-size: 5.8rem;
+    
 }
